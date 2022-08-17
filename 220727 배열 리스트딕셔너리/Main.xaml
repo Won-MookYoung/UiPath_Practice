@@ -1,0 +1,238 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="718,361" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:uasa="clr-namespace:UiPath.Activities.System.Arrays;assembly=UiPath.System.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>UiPath.Activities.System.Arrays</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Flowchart sap:VirtualizedContainerService.HintSize="644,636" sap2010:WorkflowViewState.IdRef="Flowchart_1">
+    <Flowchart.Variables>
+      <Variable x:TypeArguments="s:String[]" Name="StrArr_text" />
+      <Variable x:TypeArguments="scg:Dictionary(x:String, x:Object)" Name="Dic_text" />
+    </Flowchart.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+        <av:Point x:Key="ShapeLocation">270,2.5</av:Point>
+        <av:Size x:Key="ShapeSize">60,75</av:Size>
+        <x:Double x:Key="Width">610</x:Double>
+        <av:PointCollection x:Key="ConnectorLocation">300,77.5 300,127.5</av:PointCollection>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Flowchart.StartNode>
+      <x:Reference>__ReferenceID0</x:Reference>
+    </Flowchart.StartNode>
+    <FlowStep>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <av:Point x:Key="ShapeLocation">0,4</av:Point>
+          <av:Size x:Key="ShapeSize">200,272</av:Size>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <Sequence sap2010:Annotation.AnnotationText="# 배열을 사용할때는 반드시 초기화를 수행해야한다.&#xD;&#xA;# 초기화하는 방법 : {&quot;,&quot;}(ADD data row 할때처럼)&#xD;&#xA;# 처음 초기화한 크기를 변경할 수 없다.(ex/ 아파트라고 생각하면됨 )&#xD;&#xA;# 더 사람이 들어가고싶다해서 더 세울스는 없고 사람이 적다해서 층을 줄일수가 없음&#xD;&#xA;# 각각의 내용물을 원소, 요소, 엘리먼트라고 함" DisplayName="배열" sap:VirtualizedContainerService.HintSize="200,272" sap2010:WorkflowViewState.IdRef="Sequence_1">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+        <Assign sap:VirtualizedContainerService.HintSize="434,60" sap2010:WorkflowViewState.IdRef="Assign_1">
+          <Assign.To>
+            <OutArgument x:TypeArguments="s:String[]">[StrArr_text]</OutArgument>
+          </Assign.To>
+          <Assign.Value>
+            <InArgument x:TypeArguments="s:String[]">[{"a","b","c","d","e"}]</InArgument>
+          </Assign.Value>
+        </Assign>
+        <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="434,62" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="[StrArr_text(0)]" />
+        <WriteLine sap2010:Annotation.AnnotationText="# 1번째 엘리먼트인 b 출력" DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="434,93" sap2010:WorkflowViewState.IdRef="WriteLine_2" Text="[StrArr_text(1)]">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+        </WriteLine>
+        <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="434,62" sap2010:WorkflowViewState.IdRef="WriteLine_3" Text="==============" />
+        <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="434,279" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[StrArr_text]">
+          <ui:ForEach.Body>
+            <ActivityAction x:TypeArguments="x:String">
+              <ActivityAction.Argument>
+                <DelegateInArgument x:TypeArguments="x:String" Name="item" />
+              </ActivityAction.Argument>
+              <Sequence DisplayName="본문" sap:VirtualizedContainerService.HintSize="273.5,154" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="231.5,62" sap2010:WorkflowViewState.IdRef="WriteLine_4" Text="[item]" />
+              </Sequence>
+            </ActivityAction>
+          </ui:ForEach.Body>
+        </ui:ForEach>
+      </Sequence>
+    </FlowStep>
+    <FlowStep>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <av:Point x:Key="ShapeLocation">410,2.00000000000001</av:Point>
+          <av:Size x:Key="ShapeSize">200,176</av:Size>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <Sequence sap2010:Annotation.AnnotationText="# 리스트를 사용할떄는 반드시 초기화를 수행해야한다.&#xD;&#xA;# 초기화하는 방법 :New List(of T)&#xD;&#xA;# 크기를 자유자재로 변경할 수 있다. " DisplayName="리스트" sap:VirtualizedContainerService.HintSize="200,176" sap2010:WorkflowViewState.IdRef="Sequence_3">
+        <Sequence.Variables>
+          <Variable x:TypeArguments="scg:List(x:String)" Name="Lst_Text" />
+        </Sequence.Variables>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+        <Assign sap2010:Annotation.AnnotationText="# 변수 초기화&#xD;&#xA;" sap:VirtualizedContainerService.HintSize="434,104" sap2010:WorkflowViewState.IdRef="Assign_2">
+          <Assign.To>
+            <OutArgument x:TypeArguments="scg:List(x:String)">[Lst_Text]</OutArgument>
+          </Assign.To>
+          <Assign.Value>
+            <InArgument x:TypeArguments="scg:List(x:String)">[New List(of String)]</InArgument>
+          </Assign.Value>
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+        </Assign>
+        <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="434,62" sap2010:WorkflowViewState.IdRef="WriteLine_5" Text="[Lst_Text.count.ToString]" />
+        <uasa:AppendItemToList x:TypeArguments="x:String" ItemIndex="{x:Null}" sap2010:Annotation.AnnotationText="# 리스트에 엘리먼트를 추가한다,(append)" DisplayName="Append Item to List" sap:VirtualizedContainerService.HintSize="434,165" sap2010:WorkflowViewState.IdRef="AppendItemToList`1_1" ItemToAppend="A" List="[Lst_Text]">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+        </uasa:AppendItemToList>
+        <uasa:AppendItemToList x:TypeArguments="x:String" ItemIndex="{x:Null}" sap2010:Annotation.AnnotationText="# 리스트에 엘리먼트를 추가한다,(append)" DisplayName="Append Item to List" sap:VirtualizedContainerService.HintSize="434,165" sap2010:WorkflowViewState.IdRef="AppendItemToList`1_2" ItemToAppend="B" List="[Lst_Text]">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+        </uasa:AppendItemToList>
+        <uasa:AppendItemToList x:TypeArguments="x:String" ItemIndex="{x:Null}" sap2010:Annotation.AnnotationText="# 리스트에 엘리먼트를 추가한다,(append)" DisplayName="Append Item to List" sap:VirtualizedContainerService.HintSize="434,165" sap2010:WorkflowViewState.IdRef="AppendItemToList`1_3" ItemToAppend="C" List="[Lst_Text]">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+        </uasa:AppendItemToList>
+        <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="434,62" sap2010:WorkflowViewState.IdRef="WriteLine_6" Text="[Lst_Text.count.ToString]" />
+        <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="434,62" sap2010:WorkflowViewState.IdRef="WriteLine_7" Text="[Lst_Text(0)]" />
+        <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="434,62" sap2010:WorkflowViewState.IdRef="WriteLine_8" Text="[Lst_Text(1)]" />
+        <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="434,62" sap2010:WorkflowViewState.IdRef="WriteLine_9" Text="============" />
+        <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="434,279" sap2010:WorkflowViewState.IdRef="ForEach`1_3" Values="[Lst_Text]">
+          <ui:ForEach.Body>
+            <ActivityAction x:TypeArguments="x:String">
+              <ActivityAction.Argument>
+                <DelegateInArgument x:TypeArguments="x:String" Name="item" />
+              </ActivityAction.Argument>
+              <Sequence DisplayName="본문" sap:VirtualizedContainerService.HintSize="273.5,154" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="231.5,62" sap2010:WorkflowViewState.IdRef="WriteLine_10" Text="[item.Tostring]" />
+              </Sequence>
+            </ActivityAction>
+          </ui:ForEach.Body>
+        </ui:ForEach>
+      </Sequence>
+    </FlowStep>
+    <FlowStep x:Name="__ReferenceID0">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <av:Point x:Key="ShapeLocation">200,127.5</av:Point>
+          <av:Size x:Key="ShapeSize">200,208</av:Size>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <Sequence sap2010:Annotation.AnnotationText="# 딕셔너리를 사용할 때는 반드시 초기화를 수행한다.&#xD;&#xA;# 초기화 하는 방법 : New Dictionary(of T, T)&#xD;&#xA;# 크기를 자유자재로 변경할 수 있다.&#xD;&#xA;# 키(key)-값(value) 쌍으로 데이터가 구조화 되어있다." DisplayName="딕셔너리" sap:VirtualizedContainerService.HintSize="304.5,462" sap2010:WorkflowViewState.IdRef="Sequence_5">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+        <Assign sap:VirtualizedContainerService.HintSize="262.5,60" sap2010:WorkflowViewState.IdRef="Assign_3">
+          <Assign.To>
+            <OutArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)">[Dic_text]</OutArgument>
+          </Assign.To>
+          <Assign.Value>
+            <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)">[New Dictionary(of string, Object)]</InArgument>
+          </Assign.Value>
+        </Assign>
+        <Assign sap:VirtualizedContainerService.HintSize="262.5,60" sap2010:WorkflowViewState.IdRef="Assign_4">
+          <Assign.To>
+            <OutArgument x:TypeArguments="x:Object">[Dic_text("NAVER URL")]</OutArgument>
+          </Assign.To>
+          <Assign.Value>
+            <InArgument x:TypeArguments="x:Object">["www.naver.com"]</InArgument>
+          </Assign.Value>
+        </Assign>
+        <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="262.5,62" sap2010:WorkflowViewState.IdRef="WriteLine_11" Text="[Dic_text(&quot;NAVER URL&quot;).ToString]" />
+      </Sequence>
+    </FlowStep>
+  </Flowchart>
+</Activity>
